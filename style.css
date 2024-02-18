@@ -1,0 +1,33 @@
+/* style.css */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #87CEEB; /* Light blue sky */
+}
+
+#rainbow {
+    cursor: pointer;
+    width: 60%;
+    height: 300px;
+    border-radius: 50%/100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.rainbow-stripe {
+    height: 14.28%; /* 100% divided by 7 colors */
+}
+
+#potOfGold {
+    width: 100px;
+    height: 100px;
+    background-color: #DAA520; /* Gold color */
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none; /* Initially hidden */
+}
