@@ -1,67 +1,37 @@
-body {
+/* style.css */
+body, html {
+    height: 100%;
+    margin: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #87CEEB; /* Light blue sky */
-    overflow: hidden;
+    align-items: flex-end; /* Align items at the bottom */
+    background-color: #87CEEB; /* Light sky blue background */
 }
 
-#rainbow {
-    width: 100%;
+.rainbow {
+    width: 100vw;
     height: 50vh;
-    position: relative;
-    overflow: hidden;
-}
-
-.rainbow-stripe {
-    width: 200%;
-    height: 14.28vh;
-    position: absolute;
-    bottom: 0;
-    border-radius: 50%;
-    animation: fadeIn 2s ease-in-out;
-    animation-fill-mode: forwards;
-    opacity: 0; /* Start invisible */
-}
-
-.rainbow-stripe:nth-child(1) { background-color: violet; right: 50%; transform: translateX(50%); }
-.rainbow-stripe:nth-child(2) { background-color: indigo; right: 48%; transform: translateX(48%); }
-.rainbow-stripe:nth-child(3) { background-color: blue; right: 46%; transform: translateX(46%); }
-.rainbow-stripe:nth-child(4) { background-color: green; right: 44%; transform: translateX(44%); }
-.rainbow-stripe:nth-child(5) { background-color: yellow; right: 42%; transform: translateX(42%); }
-.rainbow-stripe:nth-child(6) { background-color: orange; right: 40%; transform: translateX(40%); }
-.rainbow-stripe:nth-child(7) { background-color: red; right: 38%; transform: translateX(38%); }
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-#potOfGold {
-    width: 100px;
-    height: 80px;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    transform: translate(-50%, 50%);
-    display: none; /* Initially hidden */
-}
-
-.pot {
-    width: 100%;
-    height: 50px;
-    background-color: #8B4513; /* Dark brown for the pot */
-    border-radius: 0 0 50px 50px; /* Rounded bottom */
-    position: absolute;
-    bottom: 0;
-}
-
-.gold {
-    width: 100%;
-    height: 30px;
-    background-color: #FFD700; /* Gold color */
+    background: radial-gradient(circle at 50% 100%, 
+        red 10%, 
+        orange 15%, 
+        yellow 20%, 
+        green 25%, 
+        blue 30%, 
+        indigo 35%, 
+        violet 40%, 
+        transparent 41%);
     border-radius: 50%;
     position: absolute;
-    bottom: 50px; /* Position above the pot */
+    bottom: 0;
+}
+
+.pot-of-gold {
+    width: 100px; /* Adjust size as needed */
+    height: 100px; /* Adjust size as needed */
+    background-color: #DAA520; /* Gold color */
+    border-radius: 50%; /* Make it circular */
+    position: absolute;
+    bottom: 0; /* Position at the bottom */
+    right: 50%; /* Start positioning from the center */
+    transform: translateX(50%); /* Adjust horizontally to align with the rainbow end */
 }
