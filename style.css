@@ -1,28 +1,22 @@
-/* style.css */
 body, html {
     height: 100%;
     margin: 0;
     display: flex;
     justify-content: center;
-    align-items: flex-end; /* Align items at the bottom */
+    align-items: center; /* Center items to make the pot of gold more visible */
     background-color: #87CEEB; /* Light sky blue background */
+    overflow: hidden; /* Hide overflow to clean up any parts of the rainbow extending beyond the viewport */
 }
 
 .rainbow {
-    width: 100vw;
-    height: 50vh;
+    width: 200vw; /* Wide enough to create a broad arc */
+    height: 200vw; /* Height equal to width to form a perfect semi-circle */
     background: radial-gradient(circle at 50% 100%, 
-        red 10%, 
-        orange 15%, 
-        yellow 20%, 
-        green 25%, 
-        blue 30%, 
-        indigo 35%, 
-        violet 40%, 
-        transparent 41%);
+        violet, indigo, blue, green, yellow, orange, red);
     border-radius: 50%;
     position: absolute;
-    bottom: 0;
+    bottom: 0; /* Align the bottom of the semi-circle with the bottom of the viewport */
+    transform: translateY(50%); /* Shift the semi-circle up to show only the top half */
 }
 
 .pot-of-gold {
@@ -31,7 +25,6 @@ body, html {
     background-color: #DAA520; /* Gold color */
     border-radius: 50%; /* Make it circular */
     position: absolute;
-    bottom: 0; /* Position at the bottom */
-    right: 50%; /* Start positioning from the center */
-    transform: translateX(50%); /* Adjust horizontally to align with the rainbow end */
+    bottom: 10%; /* Position above the bottom of the screen to make it fully visible */
+    right: 50px; /* Position to the right; adjust as needed to place it at the rainbow's end */
 }
