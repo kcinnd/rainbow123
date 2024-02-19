@@ -7,7 +7,7 @@ body {
 }
 
 #rainbow {
-    cursor: pointer; /* Change cursor to pointer on hover to indicate interactivity */
+    cursor: pointer; /* Changes the cursor to a pointer on hover to indicate interactivity */
 }
 
 #potOfGold {
@@ -27,20 +27,6 @@ body {
 @keyframes dance {
     0%, 100% { transform: translateY(0) translateX(-50%); }
     50% { transform: translateY(-20px) translateX(-50%); }
-}
-
-/* Animation for the pot of gold to 'sparkle' */
-@keyframes sparkle {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.5; }
-}
-
-.dancing {
-    animation: dance 1s infinite; /* Apply the dancing animation */
-}
-
-.sparkling {
-    animation: sparkle 1.5s infinite; /* Apply the sparkling animation */
 }
 
 /* Animation for the pot of gold to 'sparkle' */
