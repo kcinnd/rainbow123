@@ -3,24 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rainbow Magic</title>
+    <title>Rainbow and Pot of Gold</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="rainbow" onclick="showPotOfGold()">
-        <!-- Rainbow stripes -->
-        <div class="rainbow-stripe" style="background-color: violet;"></div>
-        <div class="rainbow-stripe" style="background-color: indigo;"></div>
-        <div class="rainbow-stripe" style="background-color: blue;"></div>
-        <div class="rainbow-stripe" style="background-color: green;"></div>
-        <div class="rainbow-stripe" style="background-color: yellow;"></div>
-        <div class="rainbow-stripe" style="background-color: orange;"></div>
-        <div class="rainbow-stripe" style="background-color: red;"></div>
+    <div id="rainbow" onclick="togglePotOfGold()">
+        <!-- SVG for the rainbow -->
+        <svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg">
+            <!-- Multiple arcs to create the rainbow effect -->
+            <path d="M600,600 Q400,-200 200,600" stroke="red" stroke-width="20" fill="transparent"/>
+            <path d="M600,600 Q400,-150 200,600" stroke="orange" stroke-width="20" fill="transparent"/>
+            <path d="M600,600 Q400,-100 200,600" stroke="yellow" stroke-width="20" fill="transparent"/>
+            <path d="M600,600 Q400,-50 200,600" stroke="green" stroke-width="20" fill="transparent"/>
+            <path d="M600,600 Q400,0 200,600" stroke="blue" stroke-width="20" fill="transparent"/>
+            <path d="M600,600 Q400,50 200,600" stroke="indigo" stroke-width="20" fill="transparent"/>
+            <path d="M600,600 Q400,100 200,600" stroke="violet" stroke-width="20" fill="transparent"/>
+        </svg>
     </div>
-    <div id="potOfGold" hidden>
-    <div class="pot"></div>
-    <div class="gold"></div>
-</div>
+    <div id="potOfGold" class="hidden">
+        <!-- SVG for the pot of gold -->
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="40" fill="gold" />
+            <!-- Additional details for the pot can be added here -->
+        </svg>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
