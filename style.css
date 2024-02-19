@@ -1,61 +1,25 @@
-/* General body styling for center alignment */
+/* General body styling */
 body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #e0e0e0; /* Light grey background for visibility */
+    min-height: 100vh;
+    background-color: #e0e0e0; /* Light grey background for contrast */
 }
 
-/* Styling for the rainbow SVG container */
+/* Styling for the SVG container to ensure visibility */
+svg {
+    display: block; /* Ensure SVGs are displayed */
+    margin: 20px; /* Add some space around the SVGs */
+    max-width: 100%; /* Ensure SVGs are not wider than the screen */
+}
+
+/* Specific styling for the rainbow SVG */
 #rainbow {
     cursor: pointer; /* Change cursor on hover to indicate it's clickable */
 }
 
-/* Initial styling for the pot of gold to be hidden */
+/* Specific styling for the pot of gold SVG */
 #potOfGold {
-    display: none; /* Start hidden and will be toggled by JavaScript */
-    position: absolute;
-    bottom: 10%; /* Adjust as needed */
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0; /* Start fully transparent */
-    transition: opacity 0.5s ease-in-out; /* Smooth transition for the opacity change */
-}
-
-/* Keyframes for the 'dancing' animation */
-@keyframes dance {
-    0%, 100% {
-        transform: translateX(-50%) translateY(0); /* Start and end at the original position */
-    }
-    50% {
-        transform: translateX(-50%) translateY(-20px); /* Move up */
-    }
-}
-
-/* Keyframes for the 'sparkling' effect */
-@keyframes sparkle {
-    0%, 100% { opacity: 1; } /* Fully visible at the start and end */
-    50% { opacity: 0.5; } /* Partially transparent in the middle */
-}
-
-/* Applying the animations to the pot of gold when it's visible */
-#potOfGold.visible {
-    display: block; /* Make the pot of gold visible */
-    opacity: 1; /* Fully opaque */
-    animation: dance 2s infinite, sparkle 1.5s infinite; /* Apply both animations */
-}
-
-/* Animation for the pot of gold to 'sparkle' */
-@keyframes sparkle {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.5; }
-}
-
-.dancing {
-    animation: dance 1s infinite; /* Apply the dancing animation */
-}
-
-.sparkling {
-    animation: sparkle 1.5s infinite; /* Apply the sparkling animation */
+    /* Initially visible for simplicity, adjust as needed */
 }
