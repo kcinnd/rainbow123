@@ -3,26 +3,24 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #e0e0e0; /* Light grey background */
+    background-color: #e0e0e0; /* Light grey background for contrast */
 }
 
 #rainbow {
-    cursor: pointer; /* Change cursor to pointer when hovering over the rainbow */
+    cursor: pointer; /* Change cursor to pointer on hover to indicate interactivity */
 }
 
 #potOfGold {
     position: absolute;
     opacity: 0; /* Start hidden */
     transition: opacity 0.5s ease-in-out; /* Smooth transition for appearing */
-    bottom: 10%; /* Position at the bottom of the screen */
+    bottom: 10%; /* Position at the bottom of the viewport */
     left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Ensure it's centered with respect to its width */
-    width: 100px; /* Set a specific width */
-    height: 100px; /* Set a specific height */
+    transform: translateX(-50%); /* Ensure it's centered horizontally */
 }
 
 .hidden {
-    display: none; /* Hide the pot of gold initially */
+    display: none; /* Hide the pot of gold by default */
 }
 
 /* Animation for the pot of gold to 'dance' */
