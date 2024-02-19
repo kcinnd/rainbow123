@@ -42,3 +42,17 @@ body {
 .sparkling {
     animation: sparkle 1.5s infinite; /* Apply the sparkling animation */
 }
+
+/* Animation for the pot of gold to 'sparkle' */
+@keyframes sparkle {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.dancing {
+    animation: dance 1s infinite; /* Apply the dancing animation */
+}
+
+.sparkling {
+    animation: sparkle 1.5s infinite; /* Apply the sparkling animation */
+}
