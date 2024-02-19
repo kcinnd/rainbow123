@@ -2,9 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Test Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rainbow and Pot of Gold</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Hello, World!</h1>
+    <div id="rainbow" onclick="togglePotOfGold()">
+        <svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+            <!-- Rainbow Arcs (Outlines, so 'fill' is set to 'none') -->
+            <path d="M10,90 Q100,10 190,90" stroke="red" stroke-width="8" fill="none"/>
+            <path d="M15,90 Q100,15 185,90" stroke="orange" stroke-width="8" fill="none"/>
+            <path d="M20,90 Q100,20 180,90" stroke="yellow" stroke-width="8" fill="none"/>
+            <path d="M25,90 Q100,25 175,90" stroke="green" stroke-width="8" fill="none"/>
+            <path d="M30,90 Q100,30 170,90" stroke="blue" stroke-width="8" fill="none"/>
+            <path d="M35,90 Q100,35 165,90" stroke="indigo" stroke-width="8" fill="none"/>
+            <path d="M40,90 Q100,40 160,90" stroke="violet" stroke-width="8" fill="none"/>
+        </svg>
+    </div>
+    <div id="potOfGold" class="hidden">
+        <svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+            <!-- Pot of Gold (Here, 'fill' is used to color the shapes) -->
+            <rect x="50" y="50" width="100" height="50" rx="20" fill="#8B4513"/> <!-- Dark brown fill for the pot -->
+            <circle cx="75" cy="65" r="10" fill="gold"/> <!-- Gold fill for the coins -->
+            <circle cx="125" cy="65" r="10" fill="gold"/>
+            <circle cx="100" cy="50" r="10" fill="gold"/>
+            <ellipse cx="100" cy="50" rx="50" ry="10" fill="#8B4513"/> <!-- Dark brown fill for the brim of the pot -->
+        </svg>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
