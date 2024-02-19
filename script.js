@@ -1,23 +1,16 @@
 function togglePotOfGold() {
     var potOfGold = document.getElementById('potOfGold');
 
-    // Check if the pot of gold is currently hidden
-    if (potOfGold.classList.contains('hidden')) {
-        // Remove the 'hidden' class to make the pot of gold visible
-        potOfGold.classList.remove('hidden');
+    // This toggles the 'visible' class which controls the visibility and animations
+    potOfGold.classList.toggle('visible');
 
-        // Add the animation classes
-        potOfGold.classList.add('dancing', 'sparkling');
-
-        // Optional: Remove the animation classes after a certain time
-        setTimeout(function() {
-            potOfGold.classList.remove('dancing', 'sparkling');
-        }, 5000); // Adjust the time as needed
-    } else {
-        // Add the 'hidden' class to hide the pot of gold
-        potOfGold.classList.add('hidden');
-
-        // Optionally, remove the animation classes immediately
-        potOfGold.classList.remove('dancing', 'sparkling');
-    }
+    // If you want the pot of gold to hide automatically after some time, uncomment below
+    /*
+    setTimeout(function() {
+        potOfGold.classList.remove('visible');
+    }, 5000); // Adjust time as needed, 5000ms = 5 seconds
+    */
 }
+
+// Ensure the rainbow element has an event listener for clicks that invokes togglePotOfGold
+document.getElementById('rainbow').addEventListener('click', togglePotOfGold);
