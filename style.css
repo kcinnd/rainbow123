@@ -1,30 +1,43 @@
-body, html {
-    height: 100%;
-    margin: 0;
+body {
     display: flex;
     justify-content: center;
-    align-items: center; /* Center items to make the pot of gold more visible */
-    background-color: #87CEEB; /* Light sky blue background */
-    overflow: hidden; /* Hide overflow to clean up any parts of the rainbow extending beyond the viewport */
+    align-items: center;
+    height: 100vh;
+    background-color: #e0e0e0;
 }
 
-.rainbow {
-    width: 200vw; /* Wide enough to create a broad arc */
-    height: 200vw; /* Height equal to width to form a perfect semi-circle */
-    background: radial-gradient(circle at 50% 100%, 
-        violet, indigo, blue, green, yellow, orange, red);
-    border-radius: 50%;
-    position: absolute;
-    bottom: 0; /* Align the bottom of the semi-circle with the bottom of the viewport */
-    transform: translateY(50%); /* Shift the semi-circle up to show only the top half */
+#rainbow {
+    cursor: pointer;
 }
 
-.pot-of-gold {
-    width: 100px; /* Adjust size as needed */
-    height: 100px; /* Adjust size as needed */
-    background-color: #DAA520; /* Gold color */
-    border-radius: 50%; /* Make it circular */
+#potOfGold {
     position: absolute;
-    bottom: 10%; /* Position above the bottom of the screen to make it fully visible */
-    right: 50px; /* Position to the right; adjust as needed to place it at the rainbow's end */
+    width: 100px;
+    height: 100px;
+    bottom: 20px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes dance {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes sparkle {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.dancing {
+    animation: dance 1s infinite;
+}
+
+.sparkling {
+    animation: sparkle 1.5s infinite;
 }
