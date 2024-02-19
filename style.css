@@ -3,44 +3,44 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #e0e0e0;
+    background-color: #e0e0e0; /* Light grey background */
 }
 
 #rainbow {
-    cursor: pointer;
+    cursor: pointer; /* Change cursor to pointer when hovering over the rainbow */
 }
 
 #potOfGold {
     position: absolute;
-    width: 200px; /* Adjusted to fit the new SVG dimensions */
-    height: 100px; /* Adjusted to fit the new SVG dimensions */
-    bottom: 20px; /* Adjust if necessary to position under the rainbow */
-    left: 50%; /* Center the pot of gold horizontally */
-    transform: translateX(-50%); /* Adjust horizontal centering */
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.5s ease-in-out; /* Smooth transition for appearing */
+    bottom: 10%; /* Position at the bottom of the screen */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Ensure it's centered with respect to its width */
+    width: 100px; /* Set a specific width */
+    height: 100px; /* Set a specific height */
 }
-
 
 .hidden {
-    display: none;
+    display: none; /* Hide the pot of gold initially */
 }
 
+/* Animation for the pot of gold to 'dance' */
 @keyframes dance {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
+    0%, 100% { transform: translateY(0) translateX(-50%); }
+    50% { transform: translateY(-20px) translateX(-50%); }
 }
 
+/* Animation for the pot of gold to 'sparkle' */
 @keyframes sparkle {
-    0% { opacity: 0; }
-    50% { opacity: 1; }
-    100% { opacity: 0; }
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
 }
 
 .dancing {
-    animation: dance 1s infinite;
+    animation: dance 1s infinite; /* Apply the dancing animation */
 }
 
 .sparkling {
-    animation: sparkle 1.5s infinite;
+    animation: sparkle 1.5s infinite; /* Apply the sparkling animation */
 }
