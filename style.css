@@ -12,12 +12,15 @@ body {
 
 #potOfGold {
     position: absolute;
-    width: 100px;
-    height: 100px;
-    bottom: 20px;
+    width: 200px; /* Adjusted to fit the new SVG dimensions */
+    height: 100px; /* Adjusted to fit the new SVG dimensions */
+    bottom: 20px; /* Adjust if necessary to position under the rainbow */
+    left: 50%; /* Center the pot of gold horizontally */
+    transform: translateX(-50%); /* Adjust horizontal centering */
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
 }
+
 
 .hidden {
     display: none;
