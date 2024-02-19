@@ -1,32 +1,49 @@
+/* General body styling for center alignment */
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #e0e0e0; /* Light grey background for contrast */
+    background-color: #e0e0e0; /* Light grey background for visibility */
 }
 
+/* Styling for the rainbow SVG container */
 #rainbow {
-    cursor: pointer; /* Changes the cursor to a pointer on hover to indicate interactivity */
+    cursor: pointer; /* Change cursor on hover to indicate it's clickable */
 }
 
+/* Initial styling for the pot of gold to be hidden */
 #potOfGold {
+    display: none; /* Start hidden and will be toggled by JavaScript */
     position: absolute;
-    opacity: 0; /* Start hidden */
-    transition: opacity 0.5s ease-in-out; /* Smooth transition for appearing */
-    bottom: 10%; /* Position at the bottom of the viewport */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Ensure it's centered horizontally */
+    bottom: 10%; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0; /* Start fully transparent */
+    transition: opacity 0.5s ease-in-out; /* Smooth transition for the opacity change */
 }
 
-.hidden {
-    display: none; /* Hide the pot of gold by default */
-}
-
-/* Animation for the pot of gold to 'dance' */
+/* Keyframes for the 'dancing' animation */
 @keyframes dance {
-    0%, 100% { transform: translateY(0) translateX(-50%); }
-    50% { transform: translateY(-20px) translateX(-50%); }
+    0%, 100% {
+        transform: translateX(-50%) translateY(0); /* Start and end at the original position */
+    }
+    50% {
+        transform: translateX(-50%) translateY(-20px); /* Move up */
+    }
+}
+
+/* Keyframes for the 'sparkling' effect */
+@keyframes sparkle {
+    0%, 100% { opacity: 1; } /* Fully visible at the start and end */
+    50% { opacity: 0.5; } /* Partially transparent in the middle */
+}
+
+/* Applying the animations to the pot of gold when it's visible */
+#potOfGold.visible {
+    display: block; /* Make the pot of gold visible */
+    opacity: 1; /* Fully opaque */
+    animation: dance 2s infinite, sparkle 1.5s infinite; /* Apply both animations */
 }
 
 /* Animation for the pot of gold to 'sparkle' */
