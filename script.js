@@ -1,4 +1,5 @@
-// script.js
-document.addEventListener('DOMContentLoaded', () => {
-    // Your JavaScript code for any dynamic behavior
-});
+function togglePotOfGold() {
+    var potOfGold = document.getElementById('potOfGold');
+    potOfGold.classList.toggle('hidden');
+    potOfGold.classList.add('dancing', 'sparkling');
+}
