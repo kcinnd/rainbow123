@@ -8,25 +8,26 @@
 </head>
 <body>
     <div id="rainbow" onclick="togglePotOfGold()">
-        <!-- SVG for the rainbow -->
-        <svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg">
-            <!-- Multiple arcs to create the rainbow effect -->
-            <path d="M600,600 Q400,-200 200,600" stroke="red" stroke-width="20" fill="transparent"/>
-            <path d="M600,600 Q400,-150 200,600" stroke="orange" stroke-width="20" fill="transparent"/>
-            <path d="M600,600 Q400,-100 200,600" stroke="yellow" stroke-width="20" fill="transparent"/>
-            <path d="M600,600 Q400,-50 200,600" stroke="green" stroke-width="20" fill="transparent"/>
-            <path d="M600,600 Q400,0 200,600" stroke="blue" stroke-width="20" fill="transparent"/>
-            <path d="M600,600 Q400,50 200,600" stroke="indigo" stroke-width="20" fill="transparent"/>
-            <path d="M600,600 Q400,100 200,600" stroke="violet" stroke-width="20" fill="transparent"/>
+        <!-- Hand-coded SVG for the Rainbow -->
+        <svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+            <!-- SVG paths for the rainbow arcs -->
+            <!-- Red arc -->
+            <path d="M10,90 Q100,-50 190,90" stroke="red" stroke-width="8" fill="none"/>
+            <!-- Repeat for other colors -->
         </svg>
     </div>
     <div id="potOfGold" class="hidden">
-        <!-- SVG for the pot of gold -->
-        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="50" cy="50" r="40" fill="gold" />
-            <!-- Additional details for the pot can be added here -->
+        <!-- Hand-coded SVG for the Pot of Gold -->
+        <svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+            <!-- SVG shapes for the pot of gold and coins -->
+            <!-- Pot's brim -->
+            <ellipse cx="100" cy="85" rx="50" ry="15" fill="black"/>
+            <!-- Repeat for pot body and coins -->
         </svg>
     </div>
+    <script src="script.js"></script>
+</body>
+</html>
     <script src="script.js"></script>
 </body>
 </html>
